@@ -20,7 +20,7 @@
 
     <properties>
         <!-- Common dependency -->
-        <version.jboss-logging>3.5.3.Final</version.jboss-logging>
+        <version.jboss-logging>3.6.1.Final</version.jboss-logging>
         <version.jboss-logging-processor>2.2.1.Final</version.jboss-logging-processor>
 
         <!-- Demo dependencies -->
