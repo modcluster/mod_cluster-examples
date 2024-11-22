@@ -21,7 +21,7 @@
     </modules>
 
     <properties>
-        <version.jakarta.servlet-api>6.0.0</version.jakarta.servlet-api>
+        <version.jakarta.servlet-api>6.1.0</version.jakarta.servlet-api>
         <version.http-client>4.5.14</version.http-client>
         <version.jfreechart>1.0.13</version.jfreechart>
         <version.jcip-annotations>1.0</version.jcip-annotations>
