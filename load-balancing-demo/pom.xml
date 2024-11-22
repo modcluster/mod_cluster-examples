@@ -21,7 +21,7 @@
     <properties>
         <!-- Common dependency -->
         <version.jboss-logging>3.5.3.Final</version.jboss-logging>
-        <version.jboss-logging-processor>2.2.1.Final</version.jboss-logging-processor>
+        <version.jboss-logging-processor>3.0.3.Final</version.jboss-logging-processor>
 
         <!-- Demo dependencies -->
         <version.http-client>4.5.14</version.http-client>
