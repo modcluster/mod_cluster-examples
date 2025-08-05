@@ -14,7 +14,7 @@ script generates a root certificate and builds the two container images the demo
 use this root certificate to generate their own; check the corresponding files for details).
 
 Then inspect the `compose.yaml` file that instructs podman-compose which containers to run with
-which properties. We're using port 8000 for httpd, and ports 8080, 8081 for Tomcats; all of them are
+which properties. We're using port 8090 for httpd, and ports 8080, 8081 for Tomcats; all of them are
 exposed to the localhost.
 
 ```
@@ -26,11 +26,11 @@ the warning (preferred) or import the created certificate among trusted ones.
 
 If everything works as expected, you can visit
 
-* [https://localhost:8000/](https://localhost:8000/)
+* [https://localhost:8090/](https://localhost:8090/)
 
     * to check whether httpd runs
 
-* [https://localhost:8000/mod_cluster_manager](https://localhost:8000/mod_cluster_manager)
+* [https://localhost:8090/mod_cluster_manager](https://localhost:8090/mod_cluster_manager)
 
     * to check whether cluster manager is running and whether the proxy sees the two Tomcat instances (it takes a little bit of time)
 
@@ -42,7 +42,7 @@ If everything works as expected, you can visit
 
     * to check the application on the second tomcat
 
-* [https://localhost:8000/app/app.jsp](https://localhost:8000/app/app.jsp)
+* [https://localhost:8090/app/app.jsp](https://localhost:8090/app/app.jsp)
 
     * to access the application through proxy
     * in case you're accessing through the browser, pay attention to the session cookies (they are honored by the balancer by default)
