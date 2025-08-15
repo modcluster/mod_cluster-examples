@@ -22,7 +22,7 @@
 <Server port="8005" shutdown="SHUTDOWN">
   <Listener className="org.jboss.modcluster.container.tomcat.ModClusterListener"
             connectorPort="tomcat_port"
-            proxyList="httpd:8000"
+            proxyList="httpd:8090"
             ssl="true"
             sslKeyAlias="tomcat"
             sslTrustStorePassword="changeit"

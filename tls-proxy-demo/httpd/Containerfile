@@ -18,7 +18,7 @@ RUN mkdir /httpd && tar xvf $(filename $HTTPD) --strip 1 -C /httpd
 
 WORKDIR /httpd
 
-RUN ./configure --with-port=8000
+RUN ./configure --with-port=8090
 RUN make
 RUN make install
 
