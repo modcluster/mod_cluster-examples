@@ -19,15 +19,11 @@ openssl pkcs12 -export \
        -chain \
        -out mycert.p12 \
        -name tomcat \
-       -password pass:changeit && \
+       -password pass:changeit
 
-keytool -importkeystore \
-        -destkeystore /root/.keystore \
-        -deststorepass changeit \
-        -srcstorepass changeit \
-        -srckeystore mycert.p12 \
-        -trustcacerts
+keytool -importcert -trustcacerts -file rootCA.crt -keystore truststore.p12 -storepass truststorepass -storetype PKCS12 -noprompt
 
 cd ..
 
 bin/catalina.sh run
+

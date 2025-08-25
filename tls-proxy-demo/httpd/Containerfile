@@ -1,6 +1,6 @@
 FROM fedora:latest AS builder
 
-ARG HTTPD_SOURCES="https://dlcdn.apache.org/httpd/httpd-2.4.63.tar.gz"
+ARG HTTPD_SOURCES="https://dlcdn.apache.org/httpd/httpd-2.4.65.tar.gz"
 ARG MPC_SOURCES="https://github.com/modcluster/mod_proxy_cluster/archive/refs/heads/main.zip"
 
 RUN dnf install gcc apr-devel apr-util-devel openssl openssl-devel pcre-devel redhat-rpm-config autoconf wcstools -y

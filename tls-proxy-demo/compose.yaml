@@ -3,6 +3,7 @@ services:
     image: httpd-mpc-ssl
     ports:
       - "8000:8000"
+      - "8090:8090"
     networks:
       - ssl-demo
 

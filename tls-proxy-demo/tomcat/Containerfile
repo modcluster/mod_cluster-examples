@@ -15,11 +15,10 @@ RUN ls
 RUN unzip $(basename ${MC_SOURCE}) && \
     mv mod_cluster-* mod_cluster && \
     cd mod_cluster && \
-    mvn clean install
+    mvn clean install && \
+    unzip dist/target/mod_cluster-distribution-*-tomcat-11.0.zip && \
+    cp mod_cluster-distribution-*/lib/*.jar /usr/local/tomcat/lib/
 
-WORKDIR /usr/local/tomcat
-
-COPY target/*.jar lib/
 RUN mkdir webapps-javaee 
 
 COPY server.xml  conf/server.xml

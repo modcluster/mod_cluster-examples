@@ -22,11 +22,13 @@
 <Server port="8005" shutdown="SHUTDOWN">
   <Listener className="org.jboss.modcluster.container.tomcat.ModClusterListener"
             connectorPort="tomcat_port"
-            proxyList="httpd:8000"
+            proxyList="httpd:8090"
             ssl="true"
             sslKeyAlias="tomcat"
-            sslTrustStorePassword="changeit"
-            sslTrustStore="/root/.keystore" />
+            sslKeyStore="certs/mycert.p12"
+            sslTrustStorePassword="truststorepass"
+            sslTrustStore="certs/truststore.p12"
+   />
 
   <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
   <!-- OpenSSL support using Tomcat Native -->
@@ -64,11 +66,15 @@
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
 -->
     <Connector port="tomcat_port" protocol="org.apache.coyote.http11.Http11NioProtocol"
-               maxThreads="150" SSLEnabled="true" scheme="https" secure="true" address="tomcat_address" >
+               SSLEnabled="true" scheme="https" secure="true" address="tomcat_address" >
 <!--        <UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" /> -->
-        <SSLHostConfig>
-            <Certificate certificateKeystoreFile="/root/.keystore"
-                         certificateKeystorePassword="changeit" type="RSA" keyAlias="tomcat" />
+        <SSLHostConfig truststoreFile="certs/truststore.p12" truststorePassword="truststorepass" truststoreType="PKCS12" >
+            <Certificate certificateKeyAlias="tomcat"
+                         certificateKeystoreFile="certs/mycert.p12"
+                         certificateKeystorePassword="changeit"
+                         type="RSA"
+            />
+
         </SSLHostConfig>
     </Connector>
 
