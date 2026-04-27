@@ -9,7 +9,7 @@
     <parent>
         <groupId>org.jboss</groupId>
         <artifactId>jboss-parent</artifactId>
-        <version>51</version>
+        <version>53</version>
     </parent>
     <groupId>org.jboss.mod_cluster</groupId>
     <artifactId>mod_cluster-examples-parent</artifactId>
@@ -51,11 +51,13 @@
     <properties>
         <!-- Require and build for JDK 17 -->
         <maven.compiler.release>17</maven.compiler.release>
+        <jdk.min.version>${maven.compiler.release}</jdk.min.version>
 
         <!-- Dependency versions -->
         <version.org.jboss.mod_cluster>2.1.0.Final</version.org.jboss.mod_cluster>
 
         <!-- Plugin versions -->
+        <version.checkstyle>10.18.2</version.checkstyle>
         <version.org.wildfly.checkstyle-config>1.0.8.Final</version.org.wildfly.checkstyle-config>
     </properties>
 
