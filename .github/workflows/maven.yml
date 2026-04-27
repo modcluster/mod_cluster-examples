@@ -1,4 +1,4 @@
-name: CI
+name: Maven
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ on:
 permissions:
   contents: read
 jobs:
-  ci:
+  build-and-test:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -34,3 +34,11 @@ jobs:
           cache: maven
       - name: Build with Maven
         run: ./mvnw --batch-mode --no-transfer-progress clean verify
+      - name: Upload Test Reports
+        uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: ${{ matrix.os }}-${{ matrix.java }}-test-reports
+          path: |
+            **/surefire-reports/*
+            **/failsafe-reports/*
