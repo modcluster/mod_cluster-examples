@@ -25,7 +25,7 @@ The following command builds all examples:
 
 Project mod_cluster uses Red Hat Jira issue tracker under MODCLUSTER project:
 
-https://issues.redhat.com/browse/MODCLUSTER
+https://redhat.atlassian.net/browse/MODCLUSTER
 
 Issues can also be filed using GitHub Issues of this repository:
 
