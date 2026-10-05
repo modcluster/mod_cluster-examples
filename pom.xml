@@ -54,7 +54,7 @@
         <jdk.min.version>${maven.compiler.release}</jdk.min.version>
 
         <!-- Dependency versions -->
-        <version.org.jboss.mod_cluster>2.1.0.Final</version.org.jboss.mod_cluster>
+        <version.org.jboss.mod_cluster>2.1.1.Final</version.org.jboss.mod_cluster>
 
         <!-- Plugin versions -->
         <version.checkstyle>10.18.2</version.checkstyle>
